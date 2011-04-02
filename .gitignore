@@ -1,0 +1,12 @@
+*/*.tar
+*/*.tar.gz
+*/*.tgz
+*/*.tar.bz2
+*/*.tbz2
+*/*.rpm
+*/*.zip
+*/noarch
+*/x86_64
+*/i386
+*/i686
+RPMS
