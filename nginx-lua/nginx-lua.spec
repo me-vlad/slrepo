@@ -32,7 +32,6 @@ Source1:        %{name}.init
 Source2:        %{name}.logrotate
 Source3:        virtual.conf
 Source4:        ssl.conf
-Source5:        nginx-upstream-fair.tar.gz
 Source7:        %{name}.sysconfig
 Source21:       GeoIPCountryCSV.zip
 Source100:      index.html
