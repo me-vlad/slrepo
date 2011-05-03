@@ -2,12 +2,12 @@
 name=Server Labs Packages for Enterprise Linux $releasever - $basearch
 baseurl=http://rpm.server-labs.com/slrepo/centos/$releasever/$basearch/
 enabled=1
-gpgcheck=0
+gpgcheck=1
 protect=0
 
 [slrepo-source]
 name=Server Labs Packages for Enterprise Linux $releasever - $basearch - Source
 baseurl=http://rpm.server-labs.com/slrepo/centos/$releasever/SRPMS/
 enabled=0
-gpgcheck=0
+gpgcheck=1
 protect=0
