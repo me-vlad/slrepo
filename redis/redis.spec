@@ -1,7 +1,7 @@
 
 Summary: Advanced persistent key-value store
 Name: redis
-Version: 2.2.2
+Version: 2.2.5
 Release: 1%{?dist}
 License: BSD
 Group: Applications/Databases
@@ -112,6 +112,9 @@ fi
 %dir %attr(0755,%{name},%{name}) %{_localstatedir}/run/%{name}
 
 %changelog
+* Tue May 3 2011 Vlad V. Teterya <vlad@server-labs.ua> 2.2.5-1
+- updated to 2.2.5
+
 * Mon Apr 4 2011 Vlad V. Teterya <vlad@server-labs.ua> 2.2.2-1
 - updated to 2.2.2
 
