@@ -16,7 +16,7 @@ BuildArch:     noarch
 Requires:      redhat-release >=  %{version} 
 
 %description
-This package contains the Server Labs Packages for Enterprise Linux (EPEL) repository
+This package contains the Server Labs Packages for Enterprise Linux repository
 GPG key as well as configuration for yum.
 
 %prep
