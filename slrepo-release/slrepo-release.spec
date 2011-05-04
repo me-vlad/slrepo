@@ -1,6 +1,6 @@
 Name:           slrepo-release       
 Version:        5 
-Release:        1%{?dist}
+Release:        2%{?dist}
 Summary:        Server Labs Packages for Enterprise Linux repository configuration
 
 Group:          System Environment/Base 
@@ -48,6 +48,9 @@ rm -rf $RPM_BUILD_ROOT
 
 
 %changelog
+* Wed May 4 2011 Vlad V. Teterya <vlad@server-labs.ua> - 5-2
+- Turn on gpgcheck
+
 * Sun Mar 13 2011 Vlad V. Teterya <vlad@server-labs.ua> - 5-1
 - Add GPG key
 
