@@ -1,11 +1,13 @@
+%define rel beta7
+
 Name:           luajit
 Version:        2.0.0
-Release:        2%{?dist}
+Release:        3%{?dist}
 Summary:        LuaJIT is a Just-In-Time Compiler for the Lua* programming language
 Group:          Development/Languages
 License:        MIT
 URL:            http://luajit.org
-Source0:        http://luajit.org/download/LuaJIT-%{version}-beta6.tar.gz
+Source0:        http://luajit.org/download/LuaJIT-%{version}-%{rel}.tar.gz
 BuildRoot:      %(mktemp -ud %{_tmppath}/%{name}-%{version}-%{release}-XXXXXX)
 Provides:       luajit = 2.0.0
 
@@ -33,7 +35,7 @@ This package contains the static version of liblua for %{name}.
 
 
 %prep
-%setup -q -n LuaJIT-%{version}-beta6
+%setup -q -n LuaJIT-%{version}-%{rel}
 
 
 %build
@@ -43,8 +45,8 @@ make %{?_smp_mflags} PREFIX=%{_usr}
 %install
 rm -rf $RPM_BUILD_ROOT
 make install PREFIX=%{_usr} DESTDIR=$RPM_BUILD_ROOT 
-mv $RPM_BUILD_ROOT%{_bindir}/%{name}-%{version}-beta6 $RPM_BUILD_ROOT%{_bindir}/%{name}
-mv $RPM_BUILD_ROOT%{_datadir}/%{name}-%{version}-beta6 $RPM_BUILD_ROOT%{_datadir}/%{name}-%{version}
+mv $RPM_BUILD_ROOT%{_bindir}/%{name}-%{version}-%{rel} $RPM_BUILD_ROOT%{_bindir}/%{name}
+mv $RPM_BUILD_ROOT%{_datadir}/%{name}-%{version}-%{rel} $RPM_BUILD_ROOT%{_datadir}/%{name}-%{version}
 
 
 %clean
@@ -81,6 +83,9 @@ rm -rf $RPM_BUILD_ROOT
 
 
 %changelog
+* Mon May 9 2011 Vlad V. Teterya <vlad@server-labs.ua> 2.0.0-3
+- Update to 2.0.0-beta7
+
 * Tue Feb 15 2011 Vlad V. Teterya <vlad@server-labs.ua> 2.0.0-2
 - Update to 2.0.0-beta6
 
